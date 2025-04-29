@@ -36,7 +36,7 @@ import {
 import { FaFilter } from "react-icons/fa";
 import { Search2Icon, DeleteIcon, AddIcon } from "@chakra-ui/icons";
 
-import { db } from "../firebase/firebaseconfig";
+import { db } from "../Firebase/firebaseconfig";
 import {
   collection,
   getDocs,
