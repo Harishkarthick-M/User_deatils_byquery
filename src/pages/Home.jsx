@@ -159,9 +159,16 @@ const Home = () => {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        minH="80vh"
+        minH="90vh"
       >
-        <Spinner size="xl" />
+        <Spinner
+          size="xl"
+          thickness="4px"
+          speed="0.55s"
+          emptyColor="gray.200"
+          color="purple.600"
+          duration="4000"
+        />
       </Box>
     );
   }
@@ -283,7 +290,6 @@ const Home = () => {
         ))}
       </SimpleGrid>
 
-      {/* Add User Modal */}
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
