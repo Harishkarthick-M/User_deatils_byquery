@@ -68,6 +68,7 @@ const Home = () => {
     email: Yup.string().email("Invalid email").required("Email is required"),
     avatar: Yup.string().url("Invalid URL").required("Avatar URL is required"),
     role: Yup.string().required("Role is required"),
+    salary: Yup.number().min(1000, "min salary will be 1000"),
   });
 
   const {
@@ -303,13 +304,14 @@ const Home = () => {
                 email: "",
                 avatar: "",
                 role: "",
+                salary: "",
               }}
               validationSchema={userDetailsSchema}
               onSubmit={handleAddUser}
             >
               {({ isSubmitting }) => (
                 <Form>
-                  {["first_name", "last_name", "email", "avatar"].map(
+                  {["first_name", "last_name", "email", "avatar", "salary"].map(
                     (fieldName) => (
                       <Field key={fieldName} name={fieldName}>
                         {({ field, form }) => (
